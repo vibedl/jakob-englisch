@@ -67,12 +67,12 @@ function start() {
       <button onclick="vokabeltest('en-de')"><b>🔤 Vokabeltest Englisch → Deutsch</b><span>Richtige Bedeutung wählen</span>${bw("en-de")}</button>
       ${anzSchwer ? `<button class="wichtig" onclick="vokabeltest('schwer')"><b>🔁 Schwere Wörter üben (${anzSchwer})</b><span>Nur die, die noch falsch waren</span></button>` : ""}
       <button onclick="quiz()"><b>🦘 Landeskunde-Quiz</b><span>Geschichte, Natur, Leben in Australien</span>${bw("quiz")}</button>
-      <button onclick="grammatik()"><b>⚙️ Grammatik</b><span>Passiv, Relativsätze, if-clauses, Zeiten</span></button>
+      <button onclick="grammatik()"><b>⚙️ Grammatik</b><span>if-clauses II, Passiv, Fragen, Gerund, Simple past</span></button>
       <button onclick="lesen()"><b>📖 Leseverstehen</b><span>Text „A day on Wirrawarra Station“</span>${bw("lesen")}</button>
       <button onclick="schreiben()"><b>📝 Schreiben</b><span>Typische Schreibaufgaben mit Tipps</span></button>
       <button class="probe" onclick="probetest()"><b>🎯 Probetest mit Note</b><span>Gemischt aus allem, ca. 15 Minuten</span>${bw("probe")}</button>
     </nav>
-    <p class="hinweis">Die Inhalte sind selbst geschrieben zum Thema der Unit, nicht aus dem Buch kopiert. Die Vokabelliste im Buch (S. 264–265) zusätzlich anschauen!</p>
+    <p class="hinweis">Grammatik und Themen nach dem Westermann-Stoffverteilungsplan zu Unit 1. Texte und Aufgaben sind selbst geschrieben, nicht aus dem Buch – die Vokabelliste im Buch (S. 264–265) zusätzlich lernen!</p>
     <button class="leise" onclick="if(confirm('Fortschritt wirklich löschen?')){stand={schwer:{},gekonnt:{},bestwerte:{}};sichern();start();}">Fortschritt zurücksetzen</button>
   `);
 }

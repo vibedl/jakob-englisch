@@ -77,6 +77,42 @@ window.VOKABELN = [
   { en: "arvo (informal)", de: "der Nachmittag (australisch, umgangssprachlich)", bsp: "See you this arvo!" },
   { en: "barbie (informal)", de: "der Grill, das Grillfest (australisch)", bsp: "Let's have a barbie on the beach." },
   { en: "Aussie", de: "Australier/in; australisch (umgangssprachlich)", bsp: "He is a true Aussie." },
+  // Tiere
+  { en: "platypus", de: "das Schnabeltier", bsp: "The platypus lays eggs, but it is a mammal." },
+  { en: "wombat", de: "der Wombat", bsp: "Wombats live in holes in the ground." },
+  { en: "emu", de: "der Emu", bsp: "The emu is a big bird that can't fly." },
+  { en: "saltwater crocodile", de: "das Salzwasserkrokodil", bsp: "Don't swim where saltwater crocodiles live!" },
+  { en: "mammal", de: "das Säugetier", bsp: "Kangaroos are mammals." },
+  { en: "pouch", de: "der Beutel (z. B. beim Känguru)", bsp: "The baby kangaroo lives in its mother's pouch." },
+  { en: "to hunt", de: "jagen", bsp: "Dingoes hunt at night." },
+  { en: "habitat", de: "der Lebensraum", bsp: "The koala's habitat is the eucalyptus forest." },
+  // Aboriginal culture
+  { en: "the Dreaming / Dreamtime", de: "die Traumzeit (Schöpfungsgeschichten der Aborigines)", bsp: "Dreaming stories explain how the land was created." },
+  { en: "rock art", de: "die Felsmalerei", bsp: "Some rock art is thousands of years old." },
+  { en: "didgeridoo", de: "das Didgeridoo (Blasinstrument)", bsp: "He plays the didgeridoo." },
+  { en: "Elder", de: "der/die Älteste (Respektsperson einer Aboriginal-Gemeinschaft)", bsp: "The Elders pass on the stories." },
+  { en: "to pass on", de: "weitergeben", bsp: "Knowledge is passed on from generation to generation." },
+  { en: "to respect", de: "respektieren, achten", bsp: "Please respect sacred places." },
+  { en: "to be proud of", de: "stolz sein auf", bsp: "Baker Boy is proud of his culture." },
+  // Statistik
+  { en: "per cent", de: "Prozent", bsp: "About 30 per cent of Australians were born overseas." },
+  { en: "pie chart", de: "das Kreisdiagramm, Tortendiagramm", bsp: "The pie chart shows where immigrants come from." },
+  { en: "the majority (of)", de: "die Mehrheit (von)", bsp: "The majority of Australians live in cities." },
+  { en: "a quarter", de: "ein Viertel", bsp: "A quarter of the people were born in another country." },
+  { en: "to increase", de: "zunehmen, steigen", bsp: "The population has increased a lot." },
+  { en: "overseas", de: "im/aus dem Ausland, in Übersee", bsp: "Many students come from overseas." },
+  // British vs Australian English
+  { en: "brekkie (AusE)", de: "das Frühstück (BrE: breakfast)", bsp: "What's for brekkie?" },
+  { en: "thongs (AusE)", de: "die Flip-Flops (BrE: flip-flops)", bsp: "Don't forget your thongs for the beach." },
+  { en: "ute (AusE)", de: "der Pick-up (BrE: pick-up truck)", bsp: "The farmer drives a ute." },
+  { en: "No worries! (AusE)", de: "Kein Problem! (BrE: No problem!)", bsp: "Thanks, mate! – No worries!" },
+  // Höflich sein & Reisen
+  { en: "Would you mind …ing?", de: "Würde es Ihnen etwas ausmachen, … zu …?", bsp: "Would you mind opening the window?" },
+  { en: "Could you please …?", de: "Könnten Sie bitte …?", bsp: "Could you please help me?" },
+  { en: "I'm looking forward to …", de: "Ich freue mich auf …", bsp: "I'm looking forward to meeting you." },
+  { en: "accommodation", de: "die Unterkunft", bsp: "We need accommodation in Cairns." },
+  { en: "sight", de: "die Sehenswürdigkeit", bsp: "The Harbour Bridge is a famous sight." },
+  { en: "to explore", de: "erkunden, erforschen", bsp: "We want to explore the rainforest." },
   // Nützliche Wörter für Texte
   { en: "however", de: "jedoch, allerdings", bsp: "It is hot. However, the nights can be cold." },
   { en: "although", de: "obwohl", bsp: "Although it was late, we went for a swim." },
@@ -106,11 +142,32 @@ window.QUIZ = [
   { f: "What does 'G'day, mate!' mean?", a: ["Hello, friend!", "Goodbye, teacher!", "Good night, everybody!", "Thank you, sir!"], r: 0, info: "" },
   { f: "What is the famous building in Sydney with a roof that looks like sails?", a: ["the Opera House", "the Harbour Bridge", "the Parliament House", "the Big Ben"], r: 0, info: "" },
   { f: "Which city is on the island state of Tasmania?", a: ["Hobart", "Darwin", "Adelaide", "Brisbane"], r: 0, info: "" },
+  { f: "Who is Baker Boy?", a: ["a young Aboriginal rapper who also raps in his Indigenous language", "a famous Australian chef", "a cricket player from Sydney", "a character in a Dreaming story"], r: 0, info: "Baker Boy (Danzal Baker) comes from Arnhem Land in the Northern Territory." },
+  { f: "What do Dreaming stories explain?", a: ["how the land, animals and people were created, and the rules for living", "how to cook Australian food", "the history of the British convicts", "how to surf"], r: 0, info: "" },
+  { f: "Where were about 30 % of the people in Australia born?", a: ["in another country (overseas)", "in Tasmania", "in the outback", "on ships"], r: 0, info: "Australia is a country of immigrants – many come from England, India, China and New Zealand." },
+  { f: "What does an Australian mean by 'No worries!'?", a: ["No problem! / You're welcome!", "I'm very worried.", "Be careful!", "Goodbye forever!"], r: 0, info: "" },
+  { f: "Which animal lays eggs although it is a mammal?", a: ["the platypus", "the koala", "the kangaroo", "the dingo"], r: 0, info: "The platypus and the echidna are the only mammals that lay eggs." },
   { f: "What is 'Australia Day' (26 January) for many Aboriginal people?", a: ["a sad day ('Invasion Day' / 'Survival Day')", "their favourite holiday", "the day they arrived in Australia", "a sports festival"], r: 0, info: "On 26 January 1788 the British arrived – for Indigenous people it was the start of losing their land." }
 ];
 
 // Grammatik-Wiederholung (Kl. 9 typisch). Typ "tipp" = Lücke eintippen, "wahl" = auswählen.
+// Grammatik laut Westermann-Stoffverteilungsplan Camden Market 9, Theme 1 "Down under":
+// Bedingungssätze Typ II, Passiv, Wortstellung & Fragebildung, Gerundium, Simple past (alles Wiederholung).
 window.GRAMMATIK = [
+  {
+    titel: "If-clauses Typ II (Bedingungssätze)",
+    regel: "Für Gedachtes, Unwahrscheinliches oder Wünsche: <b>If + simple past</b>, … <b>would + Infinitiv</b>. Bei <i>be</i> oft <b>were</b> für alle Personen: <i>If I were you, …</i>. Nie <i>would</i> im if-Teil! Steht der if-Teil hinten, fällt das Komma weg.",
+    aufgaben: [
+      { s: "If I ___ (have) enough money, I would fly to Australia.", l: ["had"] },
+      { s: "If we went to Sydney, we ___ (visit) the Opera House.", l: ["would visit", "'d visit"] },
+      { s: "I would go surfing every day if I ___ (live) near Bondi Beach.", l: ["lived"] },
+      { s: "If I ___ (be) you, I would always wear sunscreen.", l: ["were", "was"] },
+      { s: "If you saw a crocodile, what would you ___ (do)?", l: ["do"] },
+      { s: "If Mia lived in a city, she ___ (not go) to the School of the Air.", l: ["would not go", "wouldn't go"] },
+      { s: "If the farmers ___ (get) more rain, their cattle would have more water.", l: ["got"] },
+      { s: "I ___ (feel) homesick if I stayed with a host family for a year.", l: ["would feel", "'d feel"] }
+    ]
+  },
   {
     titel: "Passive (Passiv)",
     regel: "Form von <b>be</b> + <b>3. Form (past participle)</b>. Simple present: <i>is/are made</i> · simple past: <i>was/were made</i> · present perfect: <i>has/have been made</i> · will-future: <i>will be made</i> · mit Modalverb: <i>can be made</i>. Wer etwas tut, steht hinter <b>by</b>.",
@@ -121,46 +178,50 @@ window.GRAMMATIK = [
       { s: "Huge parts of the bush ___ (destroy) by bushfires since 2019.", l: ["have been destroyed"] },
       { s: "The reef must ___ (protect) for future generations.", l: ["be protected"] },
       { s: "English ___ (speak) in Australia.", l: ["is spoken"] },
-      { s: "Next year a new national park ___ (open).", l: ["will be opened"] },
+      { s: "Dreaming stories ___ (tell) by Aboriginal people for thousands of years.", l: ["have been told"] },
       { s: "The Opera House ___ (design) by Jørn Utzon.", l: ["was designed"] }
     ]
   },
   {
-    titel: "Relative clauses (Relativsätze)",
-    regel: "<b>who</b> für Personen, <b>which</b> für Dinge/Tiere, <b>that</b> für beides (nur bei notwendigen Relativsätzen), <b>whose</b> = dessen/deren, <b>where</b> für Orte. Ist das Relativpronomen <i>Objekt</i>, kann es wegfallen (contact clause): <i>the boy (who) I met</i>.",
+    titel: "Questions (Fragebildung & Wortstellung)",
+    regel: "Aussagesatz: <b>Subjekt – Verb – Objekt</b>, dann Ort, dann Zeit. Fragen: (Fragewort) + <b>Hilfsverb</b> + Subjekt + Verb. Kein Hilfsverb da? Dann <b>do/does/did</b>. Fragst du nach dem Subjekt (<i>Who/What …?</i>), gibt es <b>kein</b> do: <i>Who lives in the outback?</i>",
     aufgaben: [
-      { s: "Uluru is a rock ___ is sacred to the Anangu people.", l: ["which", "that"] },
-      { s: "The convicts ___ came to Australia had to work very hard.", l: ["who", "that"] },
-      { s: "Alice Springs is a town ___ many tourists stop on their way to Uluru.", l: ["where"] },
-      { s: "Tom is the boy ___ father is a flying doctor.", l: ["whose"] },
-      { s: "The koala is an animal ___ sleeps up to 20 hours a day.", l: ["which", "that"] },
-      { s: "Kevin Rudd was the Prime Minister ___ apologized to the Stolen Generations.", l: ["who", "that"] },
-      { s: "Sydney is the city ___ my host family lives.", l: ["where"] }
+      { s: "Where ___ kangaroos live?", l: ["do"] },
+      { s: "When ___ the First Fleet arrive in Australia?", l: ["did"] },
+      { s: "___ Mia go to school by plane? – No, she doesn't.", l: ["does"] },
+      { s: "Who ___ (paint) the old rock art? (Subjektfrage, simple past)", l: ["painted"] },
+      { s: "___ you ever been to Australia?", l: ["have"] },
+      { s: "What ___ you do if you saw a snake?", l: ["would"] },
+      { s: "How long ___ the flight from Frankfurt to Sydney take? (simple present)", l: ["does"] },
+      { s: "Bring in die richtige Reihenfolge: stop / every year / many tourists / in Alice Springs → ___", l: ["many tourists stop in alice springs every year"] }
     ]
   },
   {
-    titel: "If-clauses (Bedingungssätze Typ 1–3)",
-    regel: "<b>Typ 1</b> (real): <i>If + present, … will + Infinitiv</i>. <b>Typ 2</b> (unwahrscheinlich/gedacht): <i>If + past, … would + Infinitiv</i>. <b>Typ 3</b> (Vergangenheit, nicht mehr änderbar): <i>If + past perfect, … would have + 3. Form</i>. Nie <i>will/would</i> im if-Teil!",
+    titel: "Gerund (-ing-Form als Nomen)",
+    regel: "Die <b>-ing-Form</b> kann wie ein Nomen benutzt werden: als Subjekt (<i>Surfing is fun.</i>), nach bestimmten Verben (<i>enjoy, like, love, hate, mind, finish, avoid, imagine, stop</i>) und nach <b>Präpositionen</b> (<i>interested in, good at, afraid of, think about, look forward to, instead of, before, after</i>).",
     aufgaben: [
-      { s: "If you go to Australia in December, you ___ (have) summer at Christmas.", l: ["will have", "'ll have"] },
-      { s: "If I ___ (live) on a station, I would go to the School of the Air.", l: ["lived"] },
-      { s: "If it doesn't rain soon, the farmers ___ (lose) their cattle.", l: ["will lose", "'ll lose"] },
-      { s: "If I had a lot of money, I ___ (travel) around Australia.", l: ["would travel", "'d travel"] },
-      { s: "If they had used sunscreen, they ___ (not get) a sunburn.", l: ["would not have got", "wouldn't have got", "would not have gotten", "wouldn't have gotten"] },
-      { s: "If you ___ (swim) between the flags, the lifeguards can see you.", l: ["swim"] },
-      { s: "If the settlers had respected the Aboriginal people, much injustice ___ (not happen).", l: ["would not have happened", "wouldn't have happened"] }
+      { s: "___ (swim) between the flags is safer.", l: ["swimming"] },
+      { s: "I'm really looking forward to ___ (meet) my host family.", l: ["meeting"] },
+      { s: "Mia enjoys ___ (live) on the station.", l: ["living"] },
+      { s: "Are you afraid of ___ (see) spiders?", l: ["seeing"] },
+      { s: "She can't imagine ___ (live) in a big city.", l: ["living"] },
+      { s: "Before ___ (go) into the outback, you should take enough water.", l: ["going"] },
+      { s: "Jack is good at ___ (ride) horses.", l: ["riding"] },
+      { s: "Thank you for ___ (help) me!", l: ["helping"] }
     ]
   },
   {
-    titel: "Tenses – Simple past oder Present perfect?",
-    regel: "<b>Simple past</b> bei abgeschlossener Zeit (<i>yesterday, in 1788, last year, ago</i>). <b>Present perfect</b> (<i>have/has + 3. Form</i>), wenn etwas bis jetzt gilt oder der Zeitpunkt egal ist (<i>ever, never, already, yet, since, for, just</i>).",
+    titel: "Simple past (einfache Vergangenheit)",
+    regel: "Für Abgeschlossenes in der Vergangenheit (<i>yesterday, last year, in 1788, … ago</i>). Regelmäßig: <b>-ed</b> (<i>arrived, stopped, tried</i>). Unregelmäßige Verben lernen: <i>go – went, see – saw, take – took, come – came, bring – brought, become – became, find – found, lose – lost</i>. Verneinung/Frage mit <b>didn't / did</b> + Infinitiv.",
     aufgaben: [
       { s: "The First Fleet ___ (arrive) in Sydney Cove in 1788.", l: ["arrived"] },
-      { s: "I ___ (never / be) to Australia.", l: ["have never been", "'ve never been"] },
-      { s: "Aboriginal people ___ (live) in Australia for more than 50,000 years.", l: ["have lived", "have been living"] },
-      { s: "Last summer my cousin ___ (see) a kangaroo in the wild.", l: ["saw"] },
-      { s: "Have you ever ___ (eat) a meat pie?", l: ["eaten"] },
-      { s: "Two years ago, a big bushfire ___ (destroy) the town.", l: ["destroyed"] }
+      { s: "Captain Cook ___ (come) to the east coast in 1770.", l: ["came"] },
+      { s: "The British ___ (bring) convicts to Australia.", l: ["brought"] },
+      { s: "In 1851 people ___ (find) gold in Victoria.", l: ["found"] },
+      { s: "Australia ___ (become) one country in 1901.", l: ["became"] },
+      { s: "Last summer we ___ (see) koalas in a wildlife park.", l: ["saw"] },
+      { s: "The settlers ___ (not ask) the Aboriginal people for their land.", l: ["did not ask", "didn't ask"] },
+      { s: "Many people ___ (lose) their homes in the bushfires in 2020.", l: ["lost"] }
     ]
   }
 ];
