@@ -62,11 +62,12 @@ function start() {
       <p class="klein">${anzGekonnt} von ${VOKABELN.length} Buch-Vokabeln sicher · ${anzSchwer} noch üben</p>
     </section>
     <nav class="kacheln">
-      <button onclick="karten()"><b>🃏 Vokabelkarten</b><span>Buchliste S. 264–265 (${VOKABELN.length} Wörter): umdrehen, anhören</span></button>
+      <button onclick="karten()"><b>🃏 Vokabelkarten</b><span>Buchliste S. 261–265 (${VOKABELN.length} Wörter): umdrehen, anhören</span></button>
       <button onclick="vokabeltest('de-en')"><b>✍️ Vokabeltest Deutsch → Englisch</b><span>Englisch eintippen</span>${bw("de-en")}</button>
       <button onclick="vokabeltest('en-de')"><b>🔤 Vokabeltest Englisch → Deutsch</b><span>Richtige Bedeutung wählen</span>${bw("en-de")}</button>
       ${anzSchwer ? `<button class="wichtig" onclick="vokabeltest('schwer')"><b>🔁 Schwere Wörter üben (${anzSchwer})</b><span>Nur die, die noch falsch waren</span></button>` : ""}
       <button onclick="mc('Falsche Freunde', mischen(FALSCHE_FREUNDE), 'ff')"><b>⚠️ Falsche Freunde</b><span>sensible, also, arm, cross …</span>${bw("ff")}</button>
+      <button onclick="mc('Was ist das? (Definitionen)', mischen(DEFINITIONEN), 'def')"><b>💬 Was ist das?</b><span>Englische Umschreibung → Wort</span>${bw("def")}</button>
       <button onclick="quiz()"><b>🦘 Landeskunde-Quiz</b><span>Geschichte, Natur, Leben in Australien</span>${bw("quiz")}</button>
       <button onclick="karten(ZUSATZ)"><b>🌏 Zusatzwörter Australien</b><span>${ZUSATZ.length} weitere Wörter – nicht aus der Buchliste</span></button>
       <button onclick="grammatik()"><b>⚙️ Grammatik</b><span>if-clauses II, Passiv, Fragen, Gerund, Simple past</span></button>
@@ -74,7 +75,7 @@ function start() {
       <button onclick="schreiben()"><b>📝 Schreiben</b><span>Typische Schreibaufgaben mit Tipps</span></button>
       <button class="probe" onclick="probetest()"><b>🎯 Probetest mit Note</b><span>Gemischt aus allem, ca. 15 Minuten</span>${bw("probe")}</button>
     </nav>
-    <p class="hinweis">Grammatik und Themen nach dem Westermann-Stoffverteilungsplan zu Unit 1. Vokabeln wie Buchliste S. 264–265, Beispielsätze, Texte und Aufgaben selbst geschrieben.</p>
+    <p class="hinweis">Grammatik und Themen nach dem Westermann-Stoffverteilungsplan zu Unit 1. Vokabeln wie Buchliste S. 261–265, Beispielsätze, Texte und Aufgaben selbst geschrieben.</p>
     <button class="leise" onclick="if(confirm('Fortschritt wirklich löschen?')){stand={schwer:{},gekonnt:{},bestwerte:{}};sichern();start();}">Fortschritt zurücksetzen</button>
   `);
 }
