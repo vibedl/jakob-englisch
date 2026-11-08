@@ -52,34 +52,36 @@ const zurueck = `<button class="zurueck" onclick="start()">‹ Übersicht</butto
 function start() {
   location.hash = "";
   const anzSchwer = Object.keys(stand.schwer).length;
-  const anzGekonnt = Object.keys(stand.gekonnt).length;
+  const anzGekonnt = VOKABELN.filter((v) => stand.gekonnt[v.en]).length;
   const bw = (k) => stand.bestwerte[k] != null ? `<span class="best">Bestwert ${stand.bestwerte[k]} %</span>` : "";
   zeige(`
     <section class="kopf">
       <h1>Unit 1 · Australia</h1>
       <p>Englisch-Test Klasse 9 – Camden Market, S. 14–29, Vokabeln S. 264–265</p>
       <div class="fortschritt"><div style="width:${Math.round(100 * anzGekonnt / VOKABELN.length)}%"></div></div>
-      <p class="klein">${anzGekonnt} von ${VOKABELN.length} Vokabeln sicher · ${anzSchwer} noch üben</p>
+      <p class="klein">${anzGekonnt} von ${VOKABELN.length} Buch-Vokabeln sicher · ${anzSchwer} noch üben</p>
     </section>
     <nav class="kacheln">
-      <button onclick="karten()"><b>🃏 Vokabelkarten</b><span>Durchblättern, umdrehen, anhören</span></button>
+      <button onclick="karten()"><b>🃏 Vokabelkarten</b><span>Buchliste S. 264–265 (${VOKABELN.length} Wörter): umdrehen, anhören</span></button>
       <button onclick="vokabeltest('de-en')"><b>✍️ Vokabeltest Deutsch → Englisch</b><span>Englisch eintippen</span>${bw("de-en")}</button>
       <button onclick="vokabeltest('en-de')"><b>🔤 Vokabeltest Englisch → Deutsch</b><span>Richtige Bedeutung wählen</span>${bw("en-de")}</button>
       ${anzSchwer ? `<button class="wichtig" onclick="vokabeltest('schwer')"><b>🔁 Schwere Wörter üben (${anzSchwer})</b><span>Nur die, die noch falsch waren</span></button>` : ""}
+      <button onclick="mc('Falsche Freunde', mischen(FALSCHE_FREUNDE), 'ff')"><b>⚠️ Falsche Freunde</b><span>sensible, also, arm, cross …</span>${bw("ff")}</button>
       <button onclick="quiz()"><b>🦘 Landeskunde-Quiz</b><span>Geschichte, Natur, Leben in Australien</span>${bw("quiz")}</button>
+      <button onclick="karten(ZUSATZ)"><b>🌏 Zusatzwörter Australien</b><span>${ZUSATZ.length} weitere Wörter – nicht aus der Buchliste</span></button>
       <button onclick="grammatik()"><b>⚙️ Grammatik</b><span>if-clauses II, Passiv, Fragen, Gerund, Simple past</span></button>
       <button onclick="lesen()"><b>📖 Leseverstehen</b><span>Text „A day on Wirrawarra Station“</span>${bw("lesen")}</button>
       <button onclick="schreiben()"><b>📝 Schreiben</b><span>Typische Schreibaufgaben mit Tipps</span></button>
       <button class="probe" onclick="probetest()"><b>🎯 Probetest mit Note</b><span>Gemischt aus allem, ca. 15 Minuten</span>${bw("probe")}</button>
     </nav>
-    <p class="hinweis">Grammatik und Themen nach dem Westermann-Stoffverteilungsplan zu Unit 1. Texte und Aufgaben sind selbst geschrieben, nicht aus dem Buch – die Vokabelliste im Buch (S. 264–265) zusätzlich lernen!</p>
+    <p class="hinweis">Grammatik und Themen nach dem Westermann-Stoffverteilungsplan zu Unit 1. Vokabeln wie Buchliste S. 264–265, Beispielsätze, Texte und Aufgaben selbst geschrieben.</p>
     <button class="leise" onclick="if(confirm('Fortschritt wirklich löschen?')){stand={schwer:{},gekonnt:{},bestwerte:{}};sichern();start();}">Fortschritt zurücksetzen</button>
   `);
 }
 
 // ---------- Vokabelkarten ----------
-function karten() {
-  let liste = mischen(VOKABELN), i = 0, umgedreht = false;
+function karten(pool = VOKABELN) {
+  let liste = mischen(pool), i = 0, umgedreht = false;
   const male = () => {
     const v = liste[i];
     zeige(`${zurueck}<h2>Vokabelkarten <small>${i + 1}/${liste.length}</small></h2>
@@ -102,10 +104,11 @@ function karten() {
 
 // ---------- Vokabeltest ----------
 function vokabeltest(art, fertigCb, anzahl = 15) {
-  let pool = art === "schwer" ? VOKABELN.filter((v) => stand.schwer[v.en]) : VOKABELN;
+  const ALLE = VOKABELN.concat(ZUSATZ);
+  let pool = art === "schwer" ? ALLE.filter((v) => stand.schwer[v.en]) : art === "zusatz" ? ZUSATZ : VOKABELN;
   if (!pool.length) pool = VOKABELN;
   const liste = mischen(pool).slice(0, Math.min(anzahl, pool.length));
-  const richtung = art === "en-de" ? "en-de" : "de-en";
+  const richtung = art === "en-de" || art === "zusatz" ? "en-de" : "de-en";
   let i = 0, punkte = 0; const fehler = [];
   const naechste = () => {
     if (i >= liste.length) {
@@ -134,7 +137,7 @@ function vokabeltest(art, fertigCb, anzahl = 15) {
         $("#w").focus(); $("#w").onclick = () => { i++; naechste(); };
       };
     } else {
-      const falsche = mischen(VOKABELN.filter((x) => x !== v)).slice(0, 3);
+      const falsche = mischen((pool.length >= 8 ? pool : ALLE).filter((x) => x !== v)).slice(0, 3);
       const opts = mischen([v, ...falsche]);
       zeige(`${kopf}<div class="frage">${esc(v.en)} ${lautBtn(v.en)}</div><div class="wahl" id="w">${opts.map((o, k) => `<button data-k="${k}">${esc(o.de)}</button>`).join("")}</div><div id="rm"></div>`);
       document.querySelectorAll("#w button").forEach((b) => b.onclick = () => {
