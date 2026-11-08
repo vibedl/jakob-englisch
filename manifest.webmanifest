@@ -1,0 +1,13 @@
+{
+  "name": "Englisch Unit 1 – Australia",
+  "short_name": "Australia",
+  "description": "Englisch-Test Klasse 9 üben: Vokabeln, Landeskunde, Grammatik, Lesen, Probetest.",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fdf6ee",
+  "theme_color": "#c4572e",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

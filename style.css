@@ -1,0 +1,43 @@
+:root{--bg:#fdf6ee;--karte:#fff;--text:#2b2118;--leise:#7b6a5c;--akzent:#c4572e;--akzent2:#e98b3f;--gut:#2e8b57;--schlecht:#c0392b;--rand:#ead9c6}
+@media (prefers-color-scheme:dark){:root{--bg:#1d1814;--karte:#2a231d;--text:#f4ece3;--leise:#b9a796;--rand:#43372d;--akzent:#e2794b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:640px;margin:0 auto;padding:16px 16px calc(40px + env(safe-area-inset-bottom))}
+h1{margin:0 0 4px;font-size:30px}h2{font-size:22px;margin:8px 0 14px}h2 small{color:var(--leise);font-weight:400;font-size:15px}h3{margin:22px 0 8px;font-size:18px}
+.kopf{background:linear-gradient(135deg,var(--akzent),var(--akzent2));color:#fff;border-radius:20px;padding:20px;margin-bottom:16px}
+.kopf p{margin:0}.klein{font-size:14px;color:var(--leise)}.kopf .klein{color:#fff;opacity:.9;margin-top:6px}
+.fortschritt{height:8px;background:rgba(255,255,255,.35);border-radius:4px;margin-top:14px;overflow:hidden}.fortschritt div{height:100%;background:#fff}
+.kacheln{display:grid;gap:10px}
+.kacheln button{display:flex;flex-direction:column;align-items:flex-start;text-align:left;background:var(--karte);border:1px solid var(--rand);border-radius:16px;padding:14px 16px;font:inherit;color:inherit;cursor:pointer}
+.kacheln button span{font-size:14px;color:var(--leise)}.kacheln .best{color:var(--gut);font-weight:600;margin-top:2px}
+.kacheln .probe{border:2px solid var(--akzent)}.kacheln .wichtig{border:2px solid var(--schlecht)}
+button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.haupt,.neben,.gut,.schlecht{border:0;border-radius:12px;padding:13px 18px;font-weight:600;min-height:48px}
+.haupt{background:var(--akzent);color:#fff;width:100%;margin-top:12px}.neben{background:var(--rand);color:var(--text)}
+.gut{background:var(--gut);color:#fff;flex:1}.schlecht{background:var(--schlecht);color:#fff;flex:1}
+.reihe{display:flex;gap:10px;align-items:center;margin-top:12px}.reihe .haupt{margin-top:0;flex:1}
+.zurueck{background:none;border:0;color:var(--akzent);padding:6px 0;font-weight:600}
+.leise{background:none;border:0;color:var(--leise);text-decoration:underline;font-size:14px;margin-top:18px}
+.hinweis{font-size:14px;color:var(--leise);margin-top:18px}
+.laut{background:var(--karte);border:1px solid var(--rand);border-radius:50%;width:44px;height:44px;flex:none;font-size:18px;vertical-align:middle}
+.karte{background:var(--karte);border:1px solid var(--rand);border-radius:20px;min-height:220px;padding:24px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:12px;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.karte .en{font-size:28px;font-weight:700}.karte .de{font-size:22px;font-weight:600}.karte.hinten{border-color:var(--akzent)}
+.bsp{font-style:italic;color:var(--leise);margin-top:8px}
+.frage{background:var(--karte);border:1px solid var(--rand);border-radius:16px;padding:18px;font-size:20px;font-weight:600;margin-bottom:12px}
+.frage.satz{font-weight:500;line-height:1.7}.luecke{color:var(--akzent);font-weight:700}
+input,textarea{width:100%;font:inherit;font-size:19px;padding:13px 14px;border:2px solid var(--rand);border-radius:12px;background:var(--karte);color:var(--text)}
+input:focus,textarea:focus{outline:none;border-color:var(--akzent)}textarea{min-height:160px;font-size:16px;margin-top:8px}
+.wahl{display:grid;gap:8px}.wahl button{background:var(--karte);border:2px solid var(--rand);border-radius:12px;padding:12px 14px;text-align:left;color:var(--text);min-height:48px}
+.wahl button.ok{border-color:var(--gut);background:color-mix(in srgb,var(--gut) 18%,var(--karte))}
+.wahl button.falsch{border-color:var(--schlecht);background:color-mix(in srgb,var(--schlecht) 18%,var(--karte))}
+.wahl button:disabled{cursor:default;color:var(--text)}
+.rm{border-radius:14px;padding:14px;margin-top:4px;font-weight:600}.rm.ja{background:color-mix(in srgb,var(--gut) 16%,var(--karte));color:var(--gut)}
+.rm.nein{background:color-mix(in srgb,var(--schlecht) 14%,var(--karte));color:var(--schlecht)}
+.loesung{color:var(--text);font-size:20px;margin-top:6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rm .bsp{font-weight:400}
+details{background:var(--karte);border:1px solid var(--rand);border-radius:14px;padding:10px 14px;margin-bottom:12px}
+summary{font-weight:600;cursor:pointer}.regel p{margin:8px 0 2px}
+.text{background:var(--karte);border:1px solid var(--rand);border-radius:16px;padding:4px 18px;line-height:1.65}
+.textauf .text{border:0;padding:0}
+.ergebnis{background:var(--karte);border:1px solid var(--rand);border-radius:20px;padding:22px;text-align:center}.ergebnis .gross{font-size:44px;font-weight:800;color:var(--akzent)}
+ul,ol{padding-left:22px}li{margin-bottom:6px}
